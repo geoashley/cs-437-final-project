@@ -2,38 +2,31 @@
 #include <ArduinoHttpClient.h>
 #include <ArduinoJson.h>
 
-
-char ssid[] = "wifi";
+//wifi setup
+char ssid[] = "wifi-host";
 char pass[] = "passcode";
 WiFiClient wifi;
 int status = WL_IDLE_STATUS;
 
-
-int    HTTP_PORT   = 3000;
+//http call setup
+int    HTTP_PORT   = 3000;//app port
 String HTTP_METHOD = "POST";
-char   HOST_NAME[] = "ipaddress"; // hostname of web server:
+char   HOST_NAME[] = "server_ip"; // hostname of web server:
 String PATH   = "/notify";
-
-// Number of milliseconds to wait without receiving any data before we give up
-const int kNetworkTimeout = 30*1000;
-// Number of milliseconds to wait if no data is available before trying again
-const int kNetworkDelay = 1000;
-
-
 String contentType = "application/json";
 
+//sensor pins
 int tempsensorPin = A0;
 int vibrationPin = A2;
 int moistsensorPin = A1;
 
-// you can adjust the threshold value
+// sensor threshold value
 float tempThreshold = 25.0;
 int moistureThreshold = 500;
 int vibThreshold = 20;
 
 int count =0;
 void setup() {
-  // putfloat tempThreshold = 25.0; your setup code here, to run once:
   pinMode(moistsensorPin, INPUT);
   pinMode(vibrationPin, INPUT);
   pinMode(tempsensorPin, INPUT);
@@ -57,7 +50,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // main code here, to run repeatedly:
   int tempreading = analogRead(tempsensorPin);
   int soilSensorValue = analogRead(moistsensorPin);
   int vibrationValue = analogRead(vibrationPin);
@@ -88,8 +81,8 @@ void loop() {
     // Serialize JSON document
     String json;
     serializeJson(doc, json);
-    // Send request
-  // send the POST request
+
+    // send the POST request
     Serial.print("json: ");
     Serial.println(json);
     HttpClient client = HttpClient(wifi, HOST_NAME, HTTP_PORT);

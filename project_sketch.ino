@@ -68,8 +68,7 @@ void loop() {
   Serial.println(soilSensorValue);
   
   if ((soilSensorValue < moistureThreshold) && (temperatureC < tempThreshold) && (vibrationValue >vibThreshold)){
-  //if(count==0){
-    Serial.println(" - earth quake - Sending notification!!");
+    Serial.println(" - earth quake!! - Sending notification!!");
 
     // Prepare JSON document
     DynamicJsonDocument doc(2048);
@@ -99,7 +98,7 @@ void loop() {
   }
   
   delay(500);
-  count++;
+
 }
 
 

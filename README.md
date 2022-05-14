@@ -21,10 +21,10 @@ http://localhost:3000/notify
 
 ````
 {
-	"temp":"+14169998888",
-	"vibration":"haha",
-	"moisture":"ashley",
-	"message":"lala"
+	"temp":21,
+	"vibration":100,
+	"moisture":2233",
+	"message":"thresholds breached"
 }
 ````
 Sample subscrible request

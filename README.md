@@ -1,5 +1,4 @@
-## Setup
-Download the helper library from https://www.twilio.com/docs/node/install. 
+## App Setup
 
 Find your Account SID and Auth Token at twilio.com/console and set the environment variables. See http://twil.io/secure
 
@@ -23,7 +22,7 @@ Start the notification app
 ````
 node index.js
 ````
-
+## Testing
 
 Sample notify request
 
@@ -49,6 +48,8 @@ post http://localhost:3000/subsribe
 	"name":"ashley"
 }
 ````
+
+## Arduino sketch setup
 
 configure the sketch 
 	

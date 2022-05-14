@@ -10,7 +10,9 @@ TWILIO_ACCOUNT_SID = <>
 TWILIO_AUTH_TOKEN = <>
 FROM_PHONE_NUMBER = <>
 ````
+
 Start the notification app
+
 ````
 node index.js
 ````
@@ -28,6 +30,7 @@ http://localhost:3000/notify
 	"message":"thresholds breached"
 }
 ````
+
 Sample subscrible request
 
 
@@ -38,3 +41,20 @@ http://localhost:3000/subsribe
 	"sendto":"+14169998888",
 	"name":"ashley"
 }
+````
+
+configure the sketch 
+	
+	1. Change the wifi/password to connect to wifi to network
+	
+	2. Change the server config for notification service.
+
+
+````
+//wifi setup
+char ssid[] = "wifi-host";
+char pass[] = "passcode";
+
+
+char   HOST_NAME[] = "server_ip"; // hostname of web server:
+````

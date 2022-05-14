@@ -11,6 +11,13 @@ TWILIO_AUTH_TOKEN = <>
 FROM_PHONE_NUMBER = <>
 ````
 
+Set up the notification app
+
+````
+npm install
+````
+
+
 Start the notification app
 
 ````
@@ -31,10 +38,10 @@ http://localhost:3000/notify
 }
 ````
 
-Sample subscrible request
+Sample subscrible request 
 
 
-http://localhost:3000/subsribe
+post http://localhost:3000/subsribe
 
 ````
 {

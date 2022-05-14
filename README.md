@@ -21,7 +21,7 @@ http://localhost:3000/notify
 
 ````
 {
-	"temp":"+14169976994",
+	"temp":"+14169998888",
 	"vibration":"haha",
 	"moisture":"ashley",
 	"message":"lala"

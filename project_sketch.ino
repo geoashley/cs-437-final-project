@@ -67,14 +67,14 @@ void loop() {
   Serial.println(soilSensorValue);
   
   if ((soilSensorValue < moistureThreshold) && (temperatureC < tempThreshold) && (vibrationValue >vibThreshold)){
-    Serial.println(" - earth quake!! - Sending notification!!");
+    Serial.println(" - Landslide!! - Sending notification!!");
 
     // Prepare JSON document
     DynamicJsonDocument doc(2048);
     doc["temp"] = temperatureC;
     doc["vibration"] = vibrationValue;
     doc["moisture"] = soilSensorValue;
-    doc["message"] = "Earthquake threasholds breached" ;
+    doc["message"] = "Landslide threasholds breached" ;
     
     // Serialize JSON document
     String json;

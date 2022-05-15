@@ -24,7 +24,7 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken); 
 
 
-app.post('/subsribe', (req, res) => {
+app.post('/subscribe', (req, res) => {
    
   const sendTo = req.body.sendto
   const name = req.body.name

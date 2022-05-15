@@ -25,7 +25,6 @@ float tempThreshold = 25.0;
 int moistureThreshold = 500;
 int vibThreshold = 20;
 
-int count =0;
 void setup() {
   pinMode(moistsensorPin, INPUT);
   pinMode(vibrationPin, INPUT);
